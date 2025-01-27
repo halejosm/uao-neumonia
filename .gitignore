@@ -169,3 +169,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+#personalizados
+conv_MLP_84.h5
+DICOM/
+JPG/
