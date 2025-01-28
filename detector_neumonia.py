@@ -15,7 +15,7 @@ import time
 import pydicom
 import tensorflow as tf
 import cv2
-from tensorflow.keras import backend as K
+from tensorflow.keras import backend as K # type: ignore
 tf.compat.v1.disable_eager_execution()
 tf.compat.v1.experimental.output_all_intermediates(True)
 
