@@ -7,6 +7,4 @@ def preprocess(array):
     clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(4, 4))
     array = clahe.apply(array)
     array = array / 255.0
-    array = np.expand_dims(array, axis=-1)
-    array = np.expand_dims(array, axis=0)
-    return array
+    return np.expand_dims(np.expand_dims(array, axis=-1), axis=0)

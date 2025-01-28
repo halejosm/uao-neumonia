@@ -1,22 +1,12 @@
-
-from tkinter import ttk, filedialog, font, messagebox
 from read_img import read_dicom_file, read_jpg_file
 from integrator import predict
-
 from tkinter import *
-from tkinter import ttk, font, filedialog, Entry
+from tkinter import ttk, font, filedialog
 from tkinter.messagebox import askokcancel, showinfo, WARNING
-import getpass
 from PIL import ImageTk, Image
 import csv
-import pyautogui
 import tkcap
-import img2pdf
-import numpy as np
-import time
-import pydicom
 import tensorflow as tf
-import cv2
 from tensorflow.keras import backend as K # type: ignore
 tf.compat.v1.disable_eager_execution()
 tf.compat.v1.experimental.output_all_intermediates(True)
