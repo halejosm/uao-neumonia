@@ -1,5 +1,5 @@
 from read_img import read_image_file
-from integrator import predict
+from integrator import predict_image
 from tkinter import *
 from tkinter import ttk, font, filedialog
 from tkinter.messagebox import askokcancel, showinfo, WARNING
@@ -127,7 +127,7 @@ class App:
             self.button1["state"] = "enabled"
 
     def run_model(self):
-        self.label, self.proba, self.heatmap = predict(self.array)
+        self.label, self.proba, self.heatmap = predict_image(self.array)
         self.img2 = Image.fromarray(self.heatmap)
         self.img2 = self.img2.resize((250, 250), Image.Resampling.LANCZOS)
         self.img2 = ImageTk.PhotoImage(self.img2)

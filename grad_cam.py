@@ -4,9 +4,8 @@ from detector_neumonia import preprocess
 from load_model import model_fun
 from tensorflow.keras import backend as K # type: ignore
 
-def generate_grad_cam(array):
+def generate_grad_cam(model, array):
     img = preprocess(array)
-    model = model_fun()
     preds = model.predict(img)
     argmax = np.argmax(preds[0])
     output = model.output[:, argmax]
