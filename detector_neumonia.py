@@ -34,7 +34,6 @@ def model_fun():
 def grad_cam(array):
     img = preprocess(array)
     model = model_fun()
-    #model = tf.keras.models.load_model('conv_MLP_84.h5')
     preds = model.predict(img)
     argmax = np.argmax(preds[0])
     output = model.output[:, argmax]
