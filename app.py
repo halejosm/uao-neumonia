@@ -21,7 +21,7 @@ class App:
         """Inicialización de la aplicación gráfica."""
         self.root = Tk()
         self.root.title("Herramienta para la detección rápida de neumonía")
-        self.root.geometry("815x560")
+        self.root.geometry("900x560")
         self.root.resizable(0, 0)
 
         # Configuración de fuentes
@@ -59,7 +59,7 @@ class App:
         self.lab1.place(x=110, y=65)
         self.lab2.place(x=545, y=65)
         self.lab3.place(x=500, y=350)
-        self.lab4.place(x=65, y=350)
+        self.lab4.place(x=65, y=400)
         self.lab5.place(x=122, y=25)
         self.lab6.place(x=500, y=400)
 
@@ -80,9 +80,9 @@ class App:
         self.button6 = ttk.Button(self.root, text="Guardar", command=self.save_results_csv)
 
         # Posicionamiento
-        self.text1.place(x=200, y=350)
+        self.text1.place(x=250, y=400)
         self.text2.place(x=610, y=350, width=90, height=30)
-        self.text3.place(x=610, y=400, width=90, height=30)
+        self.text3.place(x=660, y=400, width=90, height=30)
         self.text_img1.place(x=65, y=90)
         self.text_img2.place(x=500, y=90)
         self.button1.place(x=220, y=460)
