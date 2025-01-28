@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+#Dato
 from tkinter import *
 from tkinter import ttk, font, filedialog, Entry
 
