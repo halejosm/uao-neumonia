@@ -18,7 +18,7 @@ def generate_grad_cam(model, array):
     for filters in range(conv_layer_output_value.shape[-1]):
         conv_layer_output_value[:, :, filters] *= pooled_grads_value[filters]
 
-    # creating the heatmap
+    # Creando mapa de calor
     heatmap = np.mean(conv_layer_output_value, axis=-1)
     heatmap = np.maximum(heatmap, 0) / np.max(heatmap)
     heatmap = cv2.resize((heatmap * 255).astype(np.uint8), (512, 512))
