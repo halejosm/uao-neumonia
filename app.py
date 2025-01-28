@@ -1,4 +1,3 @@
-# Importaciones necesarias
 import csv
 from tkinter import *
 from tkinter import ttk, font, filedialog
@@ -25,12 +24,25 @@ class Predictor:
         self.heatmap = None
 
     def load_image(self, filepath):
-        """Carga la imagen desde un archivo y devuelve la imagen procesada."""
+        """
+        Carga la imagen desde un archivo y devuelve la imagen procesada.
+
+        Args:
+            filepath: La ruta del archivo de la imagen a cargar.
+
+        Returns:
+            img_to_show: Imagen procesada lista para mostrar.
+        """
         self.image_array, img_to_show = read_image_file(filepath)
         return img_to_show
 
     def run_model(self):
-        """Ejecuta el modelo de predicción sobre la imagen cargada."""
+        """
+        Ejecuta el modelo de predicción sobre la imagen cargada.
+
+        Returns:
+            tuple: Etiqueta predicha, probabilidad de la predicción, y el heatmap.
+        """
         self.label, self.probability, self.heatmap = predict_image(self.image_array)
         return self.label, self.probability, self.heatmap
 
@@ -42,14 +54,26 @@ class StorageHandler:
         self.report_id = 0
 
     def save_to_csv(self, patient_id, label, probability):
-        """Guarda los resultados en un archivo CSV."""
+        """
+        Guarda los resultados en un archivo CSV.
+
+        Args:
+            patient_id: Identificación del paciente.
+            label: Etiqueta predicha por el modelo.
+            probability: Probabilidad de la predicción.
+        """
         with open(self.csv_file, "a") as csvfile:
             writer = csv.writer(csvfile, delimiter="-")
             writer.writerow([patient_id, label, f"{probability:.2f}%"])
         showinfo(title="Guardar", message="Los datos se guardaron con éxito.")
 
     def generate_pdf(self, root):
-        """Genera un PDF del estado actual de la interfaz."""
+        """
+        Genera un PDF del estado actual de la interfaz.
+
+        Args:
+            root: La raíz de la interfaz gráfica de usuario.
+        """
         cap = tkcap.CAP(root)
         report_name = f"Reporte{self.report_id}.jpg"
         img = cap.capture(report_name)
@@ -66,11 +90,12 @@ class App:
         self.root = Tk()
         self.predictor = Predictor()
         self.storage = StorageHandler()
-
         self.setup_ui()
 
     def setup_ui(self):
-        """Configura la interfaz gráfica y los componentes."""
+        """
+        Configura la interfaz gráfica y los componentes.
+        """
         self.root.title("Herramienta para la detección rápida de neumonía")
         self.root.geometry("900x560")
         self.root.resizable(0, 0)
@@ -95,7 +120,12 @@ class App:
         self.root.mainloop()
 
     def setup_labels(self, fonti):
-        """Configura y coloca las etiquetas."""
+        """
+        Configura y coloca las etiquetas.
+
+        Args:
+            fonti: La fuente utilizada para las etiquetas.
+        """
         labels = [
             ("Imagen Radiográfica", (110, 65)),
             ("Imagen con Heatmap", (545, 65)),
@@ -109,7 +139,9 @@ class App:
             label.place(x=position[0], y=position[1])
 
     def setup_inputs_and_buttons(self):
-        """Configura entradas y botones de la interfaz."""
+        """
+        Configura entradas y botones de la interfaz.
+        """
         # Entradas de texto
         self.id_entry = ttk.Entry(self.root, textvariable=self.id_var, width=10)
         self.img_display_1 = Text(self.root, width=31, height=15)

@@ -1,10 +1,20 @@
 import numpy as np
 import cv2
+from tensorflow.keras import backend as K  # type: ignore
 from detector_neumonia import preprocess
 from load_model import model_fun
-from tensorflow.keras import backend as K # type: ignore
 
 def generate_grad_cam(model, array):
+    """
+    Genera un mapa de Grad-CAM para la imagen proporcionada.
+
+    Args:
+        model: El modelo utilizado para generar el mapa de Grad-CAM.
+        array: La imagen de entrada en formato de matriz numpy.
+
+    Returns:
+        Imagen con el mapa de calor superpuesto.
+    """
     img = preprocess(array)
     preds = model.predict(img)
     argmax = np.argmax(preds[0])
@@ -29,4 +39,5 @@ def generate_grad_cam(model, array):
     transparency = transparency.astype(np.uint8)
     superimposed_img = cv2.add(transparency, img2)
     superimposed_img = superimposed_img.astype(np.uint8)
+
     return superimposed_img[:, :, ::-1]
