@@ -1,4 +1,4 @@
-from read_img import read_dicom_file, read_jpg_file
+from read_img import read_image_file
 from integrator import predict
 from tkinter import *
 from tkinter import ttk, font, filedialog
@@ -6,8 +6,12 @@ from tkinter.messagebox import askokcancel, showinfo, WARNING
 from PIL import ImageTk, Image
 import csv
 import tkcap
+
+
 import tensorflow as tf
 from tensorflow.keras import backend as K # type: ignore
+
+# Configuración global de TensorFlow
 tf.compat.v1.disable_eager_execution()
 tf.compat.v1.experimental.output_all_intermediates(True)
 
@@ -107,9 +111,9 @@ class App:
         )
         if filepath:
             if filepath.lower().endswith(".dcm"):
-                self.array, img2show = read_dicom_file(filepath)
+                self.array, img2show = read_image_file(filepath)
             elif filepath.lower().endswith((".jpg", ".jpeg", ".png")):
-                self.array, img2show = read_jpg_file(filepath)
+                self.array, img2show = read_image_file(filepath)
             else:
                 showinfo(
                     title="Error",
