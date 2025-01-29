@@ -13,16 +13,18 @@ Además, se implementa la técnica Grad-CAM, que permite resaltar las regiones r
 El repositorio incluye diversos scripts para cada una de las funciones de la herramienta, así como el módulo de integración. También se detallan los requisitos necesarios para su funcionamiento óptimo, las instrucciones de instalación, las pruebas unitarias realizadas para garantizar su correcto desempeño y la licencia correspondiente.
 
 # Tabla de contenido
-- [Introducción](#Introducción)
-    - [Neumonía](#Neumonía)
-- [Archivos del repositorio](#Archivos-del-repositorio)
+- [Introducción](#introducción)
+    - [Neumonía](#neumonía)
+- [Archivos del repositorio](#archivos-del-repositorio)
     - [detector_neumonia.py](#detector-neumonia-py)
     - [read_img.py](#read-img-py) 
     - [preprocess_img.py](#preprocess-img-py)
     - [load_model.py](#load-model-py)  
     - [grad_cam.py](#grad-cam-py)  
     - [integrator.py](#integrator-py)       
- - [Requerimientos para usar la herramienta de detección](#Requerimientos-para-usar-la-herramienta-de-detección) 
+ - [Requerimientos para usar la herramienta de detección](#requerimientos-para-usar-la-herramienta-de-detección)
+ - [Integrantes del proyecto](#Integrantes_del_proyecto)
+
 ---
 
 # Introducción
@@ -39,6 +41,7 @@ Para el diagnóstico médico de la neumonía, se realizan varios exámenes, como
 Es por esta razón que, mediante la implementación de técnicas de Deep Learning, se puede desarrollar una herramienta para la detección rápida de neumonía. Esta herramienta resalta las regiones relevantes de las imágenes, identificando áreas donde la infección podría estar presente.
 
 **Referencias**
+
 [1]https://www.mayoclinic.org/es/diseases-conditions/pneumonia/symptoms-causes/syc-20354204
 [2]https://www.mayoclinic.org/es/diseases-conditions/pneumonia/diagnosis-treatment/drc-20354210
 
@@ -110,7 +113,40 @@ Para ejecutar correctamente la herramienta de detección de neumonía, siga los 
 # Uso de la interfaz gráfica
 
 Al ejecutar el script detector_neumonia.py, se abrirá una ventana con la interfaz gráfica, la cual debe verse de la siguiente manera:
+
 ![interfaz 1](imagen_2025-01-28_221122786.png)
+
+Siga los siguientes pasos
+
+1. Escriba la cédula del paciente en la casilla correspondiente.
+2. Haga clic en el botón "Cargar Imagen" y seleccione la radiografía de tórax desde su ordenador. La imagen puede estar en formato .dcm (DICOM) u otros formatos comunes como JPEG, PNG, etc.Una vez cargada la imagen, debería verla en la parte izquierda de la interfaz tal como se ve a continuación
+
+![interfaz 1](carga.PNG)
+
+3. Haga clic en el botón "Predecir" para ejecutar el modelo y obtener el resultado.Tras la predicción, verá lo siguiente:
+
+![interfaz 1](resultado.PNG)
+
+- Imagen de la radiografía en la parte izquierda de la pantalla.
+- Imagen con el mapa de calor en la parte derecha, destacando las áreas más influyentes en la predicción.
+- El resultado predicho por el modelo (bacteriana, viral, o neumonía).
+- El valor de probabilidad en porcentaje con el que el modelo determinó la clasificación.
+
+4. Si lo desea, puede guardar los datos obtenidos haciendo clic en el botón "Guardar". Esto generará un archivo llamado "historial.csv" con los resultados.
+5. Puede guardar una copia del reporte visual generado por el entorno haciendo clic en el botón "PDF". Esto creará un archivo en formato PDF y JPG con la captura de la interfaz y los resultados de la predicción.
+6. Si necesita realizar una corrección o una nueva predicción, puede borrar todos los datos ingresados haciendo clic en el botón "Borrar".
+
+# Integrantes del proyecto
+
+- Francisco Javier Rivera Rozo
+- Carlos Armando Daza Rendón
+- Andrés Felipe Coral
+- alejandro sanchez
+
+
+   
+
+
 
 
 
