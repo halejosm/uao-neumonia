@@ -23,7 +23,7 @@ El repositorio incluye diversos scripts para cada una de las funciones de la her
     - [grad_cam.py](#grad-cam-py)  
     - [integrator.py](#integrator-py)       
  - [Requerimientos para usar la herramienta de detección](#requerimientos-para-usar-la-herramienta-de-detección)
- - [Integrantes del proyecto](#Integrantes_del_proyecto)
+ - [Integrantes del proyecto](#Integrantes-del-proyecto)
 
 ---
 
