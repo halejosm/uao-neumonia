@@ -88,6 +88,10 @@ El modelo incluye 3 capas Densas de 1024, 1024 y 3 neuronas (para las 3 clases d
 
 Para regularizar el modelo se utiliza 3 capas de Dropout al 20%; dos en los bloques 4 y 5 conv y otra después de la 1ra capa Dense.
 
+Nota: El modelo denominado 'conv_MLP_84' en formato .h5 debe ser colocado en la carpeta models para asegurar el funcionamiento correcto de la herramienta de detección,tal como se muestra en la imagen a continuación.
+
+![info](load.png)
+
 ## grad_cam.py
 
 Este script permite generar un mapa de calor utilizando la técnica Grad-CAM para la imagen seleccionada, lo que facilita la visualización de las áreas relevantes para la predicción realizada por el modelo.
