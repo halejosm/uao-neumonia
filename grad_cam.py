@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 from tensorflow.keras import backend as K  # type: ignore
-from detector_neumonia import preprocess
+from preprocess_img import preprocess_image
 from load_model import model_fun
 
 def generate_grad_cam(model, array):
@@ -15,7 +15,7 @@ def generate_grad_cam(model, array):
     Returns:
         Imagen con el mapa de calor superpuesto.
     """
-    img = preprocess(array)
+    img = preprocess_image(array)
     preds = model.predict(img)
     argmax = np.argmax(preds[0])
     output = model.output[:, argmax]
