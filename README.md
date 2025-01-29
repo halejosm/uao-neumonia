@@ -16,7 +16,7 @@ El repositorio incluye diversos scripts para cada una de las funciones de la her
 - [Introducción](#introducción)
     - [Neumonía](#neumonía)
 - [Archivos del repositorio](#archivos-del-repositorio)
-    - [detector_neumonia.py](#detector-neumonia-py)
+    - [app.py](#app-py)
     - [read_img.py](#read-img-py) 
     - [preprocess_img.py](#preprocess-img-py)
     - [load_model.py](#load-model-py)  
@@ -48,7 +48,7 @@ Es por esta razón que, mediante la implementación de técnicas de Deep Learnin
 
 # Archivos del repositorio
 
-## detector_neumonia.py
+## app.py
 
 Este script contiene el diseño de la interfaz gráfica de la herramienta de detección, la cual fue desarrollada utilizando la biblioteca Tkinter. Tkinter permite crear un entorno gráfico en lugar de depender de la terminal de texto.
 
@@ -114,18 +114,18 @@ Para ejecutar correctamente la herramienta de detección de neumonía, siga los 
 
 Al ejecutar el script detector_neumonia.py, se abrirá una ventana con la interfaz gráfica, la cual debe verse de la siguiente manera:
 
-![interfaz 1](imagen_2025-01-28_221122786.png)
+![interfaz 1](load.png)
 
 Siga los siguientes pasos
 
 1. Escriba la cédula del paciente en la casilla correspondiente.
 2. Haga clic en el botón "Cargar Imagen" y seleccione la radiografía de tórax desde su ordenador. La imagen puede estar en formato .dcm (DICOM) u otros formatos comunes como JPEG, PNG, etc.Una vez cargada la imagen, debería verla en la parte izquierda de la interfaz tal como se ve a continuación
 
-![interfaz 1](carga.PNG)
+![interfaz 2](carga.PNG)
 
 3. Haga clic en el botón "Predecir" para ejecutar el modelo y obtener el resultado.Tras la predicción, verá lo siguiente:
 
-![interfaz 1](resultado.PNG)
+![interfaz 3](resultado.PNG)
 
 - Imagen de la radiografía en la parte izquierda de la pantalla.
 - Imagen con el mapa de calor en la parte derecha, destacando las áreas más influyentes en la predicción.
