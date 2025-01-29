@@ -1,0 +1,1 @@
+En esta carpeta irá contenida el resutlado del diagnostico junto con los repectivos reportes en pdf y png.
