@@ -90,7 +90,7 @@ Para regularizar el modelo se utiliza 3 capas de Dropout al 20%; dos en los bloq
 
 Nota: El modelo denominado 'conv_MLP_84' en formato .h5 debe ser colocado en la carpeta models para asegurar el funcionamiento correcto de la herramienta de detección,tal como se muestra en la imagen a continuación.
 
-![info](images/Info.jpg)
+![info](Images/info.jpg)
 
 ## grad_cam.py
 
@@ -118,7 +118,7 @@ Para ejecutar correctamente la herramienta de detección de neumonía, siga los 
 
 Al ejecutar el script detector_neumonia.py, se abrirá una ventana con la interfaz gráfica, la cual debe verse de la siguiente manera:
 
-![interfaz 1](Images/load.png)
+![interfaz 1](Images/Interfaz_1.PNG)
 
 Siga los siguientes pasos
 
