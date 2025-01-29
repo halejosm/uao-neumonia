@@ -1,7 +1,7 @@
 import numpy as np
-from models.load_model import model_fun
-from visualizations.grad_cam import generate_grad_cam
-from data.preprocess_img import preprocess_image
+from src.models.load_model import model_fun
+from src.visualizations.grad_cam import generate_grad_cam
+from src.data.preprocess_img import preprocess_image
 
 def predict_image(array):
     """
