@@ -1,0 +1,22 @@
+                                           Licencia Herramienta de Detección Rápida de Neumonía
+                                                         Versión 1.0, Enero 2025
+
+1. Introducción
+Esta licencia regula el uso, modificación y distribución de la herramienta para la detección rápida de neumonía mediante el uso de Deep Learning en el procesamiento de imágenes radiográficas de tórax, la cual fue desarrollada en Python 3.10.13 bajo los lineamientos PEP8 dentro del entorno virtual Conda. Se concede el permiso para su uso en proyectos educativos y de investigación.
+2. Permisos y Restricciones
+•	Se permite el uso, copia, modificación y distribución del software sin costo alguno.
+•	Se permite su uso con fines educativos y de investigación.
+•	No se otorgan derechos para su uso en entornos clínicos o comerciales sin previa autorización.
+•	Se prohíbe el uso de este software para fines malintencionados o engañosos.
+3. Exclusión de Garantía y Responsabilidad
+•	Este software se proporciona "TAL CUAL", sin garantías explícitas o implícitas de funcionamiento, exactitud o idoneidad para un propósito específico.
+•	El usuario asume toda la responsabilidad y riesgo derivado de su uso.
+•	Los desarrolladores y contribuidores no serán responsables de daños directos, indirectos, incidentales o consecuentes derivados del uso de este software.
+4. Atribución
+•	Se recomienda conservar el aviso de copyright original y citar a los autores originales en cualquier distribución o modificación del software.
+5. Modificaciones y Contribuciones
+•	Cualquier persona puede modificar y mejorar el software.
+•	Se alienta a compartir mejoras con la comunidad, pero no es obligatorio.
+•	Al contribuir código a este proyecto, el contribuyente acepta que sus aportaciones se incorporen bajo los mismos términos de esta licencia.
+6. Contacto
+Si tienes dudas o comentarios, puedes contactar a los desarrolladores.
