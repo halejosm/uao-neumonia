@@ -1,6 +1,4 @@
-import pytest
-from unittest.mock import patch, MagicMock
-import pydicom
+from unittest.mock import MagicMock
 import numpy as np
 
 # Importar la funcion que se va realizar el test unitario

@@ -1,4 +1,3 @@
-import pytest
 import numpy as np
 
 # Importar la funcion que se va realizar el test unitario
