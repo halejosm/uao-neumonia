@@ -1,15 +1,22 @@
-FROM python:3.10.13
+FROM continuumio/miniconda3
 
-RUN apt-get update -y && \
-    apt-get install python3-opencv -y 
+WORKDIR /app
 
-WORKDIR /home/src
-
+# Copiar environment.yml
 COPY . ./
-# Instalar dependencias específicas (incluyendo TensorFlow)
-RUN pip cache purge
-RUN pip install --no-cache-dir -r requirements.txt -v
+# Crear el entorno con Python 3.10.13 (¡ajusta la versión en environment.yml si es necesario!)
+RUN conda env create -f environment.yml --force
 
+# Inicializar conda para bash (¡CRUCIAL!)
+RUN conda init bash
 
-# Definir el comando de inicio (ajusta según tu aplicación)
-CMD ["python", "src/main.py"]
+# Activar el entorno (usando conda run para evitar problemas de shell)
+RUN conda run -n myenv echo "Environment activated"  # Solo para verificar
+
+# Copiar el código de la aplicación
+
+# Hacer entrypoint.sh ejecutable
+RUN chmod +x entrypoint.sh
+
+# ENTRYPOINT (ejecuta entrypoint.sh)
+ENTRYPOINT ["./entrypoint.sh"]
