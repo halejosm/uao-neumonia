@@ -8,4 +8,4 @@ def model_fun():
     Retorna:
         tensorflow.keras.Model: El modelo cargado.
     """
-    return tf.keras.models.load_model('conv_MLP_84.h5')
+    return tf.keras.models.load_model('src/models/conv_MLP_84.h5')
