@@ -55,9 +55,9 @@ A nivel general, la estructura del proyecto es la siguiente:
 - Images/ Contiene las imágenes utilizadas en el proyecto.
 - Reports/ Almacena los reportes generados durante el análisis o ejecución del código.
 - Src (Source)/ Contiene el código fuente del proyecto, organizado en los siguientes subdirectorios:
-  . Data/ Contiene scripts relacionados con el manejo de datos, como app.py – preprocess_img.py – read_img.py
-  . Models/ almacena el modelo entrenado y el script necesario para su gestión y uso.
-  . Visualizations/ Contiene scripts para la generación y almacenamiento de gráficos, como grad_cam.py 
+  - Data/ Contiene scripts relacionados con el manejo de datos, como app.py – preprocess_img.py – read_img.py
+  - Models/ almacena el modelo entrenado y el script necesario para su gestión y uso.
+  - Visualizations/ Contiene scripts para la generación y almacenamiento de gráficos, como grad_cam.py 
 - Test/ Almacena las pruebas unitarias del proyecto.
 
 2. Archivos en la raíz del proyecto:
