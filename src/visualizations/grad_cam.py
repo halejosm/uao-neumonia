@@ -2,7 +2,6 @@ import numpy as np
 import cv2
 from tensorflow.keras import backend as K  # type: ignore
 from data.preprocess_img import preprocess_image
-from models.load_model import model_fun
 
 def generate_grad_cam(model, array):
     """
