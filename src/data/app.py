@@ -7,8 +7,8 @@ import tkcap
 import tensorflow as tf
 
 # Importaciones de módulos personalizados
-from read_img import read_image_file
-from integrator import predict_image
+from data.read_img import read_image_file
+from models.integrator import predict_image
 
 # Configuración global de TensorFlow
 tf.compat.v1.disable_eager_execution()

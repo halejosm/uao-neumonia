@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 from tensorflow.keras import backend as K  # type: ignore
 from detector_neumonia import preprocess
-from load_model import model_fun
+from src.models.load_model import model_fun
 
 def generate_grad_cam(model, array):
     """
