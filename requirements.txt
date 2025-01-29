@@ -8,3 +8,5 @@ matplotlib==3.10.0
 pandas==2.2.3
 tensorflow==2.10.0
 python-xlib==0.33
+pytest==8.3.4
+pytest-mock==3.14.0
