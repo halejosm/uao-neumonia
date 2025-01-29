@@ -27,7 +27,7 @@ El repositorio incluye diversos scripts para cada una de las funciones de la her
 
 # Introducción
 
- ### Neumonía
+ ## Neumonía
 La neumonía es una infección que provoca la inflamación de los sacos aéreos de uno o ambos pulmones. Estos sacos pueden llenarse de líquido o pus, lo que genera síntomas como tos con flema, fiebre, escalofríos y dificultad para respirar. La neumonía puede variar en gravedad, desde una infección leve hasta una condición potencialmente mortal.
 
 Existen diversos gérmenes que pueden causar neumonía, siendo los más comunes las bacterias, los virus respiratorios y los hongos.
@@ -45,19 +45,19 @@ Es por esta razón que, mediante la implementación de técnicas de Deep Learnin
 
 # Archivos del repositorio
 
-### detector_neumonia.py
+## detector_neumonia.py
 
 Este script contiene el diseño de la interfaz gráfica de la herramienta de detección, la cual fue desarrollada utilizando la biblioteca Tkinter. Tkinter permite crear un entorno gráfico en lugar de depender de la terminal de texto.
 
 A través de los botones de la interfaz, se pueden invocar los diferentes métodos definidos en otros scripts, facilitando la interacción del usuario con la herramienta y mejorando la experiencia de uso.
 
-### read_img.py
+## read_img.py
 
 Este script permite leer un archivo de imagen en formatos como .dcm (DICOM) y otros formatos de imagen comunes (JPEG, PNG, etc.), y devuelve la representación de la imagen en formato RGB junto con un objeto de tipo Pillow (PIL)Image.
 
 Pillow (PIL) es una biblioteca de Python que se utiliza para manipular y procesar imágenes de manera eficiente. En este caso, el script se usa específicamente para trabajar con imágenes de radiografías torácicas.
 
-### preprocess_img.py
+## preprocess_img.py
 
 Una vez obtenida la representación de la imagen y el objeto Pillow (PIL) del script read_img.py, este script realiza las siguientes modificaciones para preparar la imagen para su procesamiento en el modelo de predicción:
 
@@ -71,7 +71,7 @@ Una vez obtenida la representación de la imagen y el objeto Pillow (PIL) del sc
 
 - Se hace una expansión de la imagen para que tenga la forma (1,512,512,1) para el procesamiento en la red convolucional.
 
-### load_model.py
+## load_model.py
 
 Este script permite cargar el archivo binario del modelo denominado 'conv_MLP_84.h5', el cual es una red neuronal convolucional (CNN) basada en la arquitectura propuesta por F. Pasa, V. Golkov, F. Pfeifer, D. Cremers y D. Pfeifer en su artículo Efficient Deep Network Architectures for Fast Chest X-Ray Tuberculosis Screening and Visualization.
 
@@ -85,7 +85,7 @@ El modelo incluye 3 capas Densas de 1024, 1024 y 3 neuronas (para las 3 clases d
 
 Para regularizar el modelo se utiliza 3 capas de Dropout al 20%; dos en los bloques 4 y 5 conv y otra después de la 1ra capa Dense.
 
-### grad_cam.py
+## grad_cam.py
 
 Este script permite generar un mapa de calor utilizando la técnica Grad-CAM para la imagen seleccionada, lo que facilita la visualización de las áreas relevantes para la predicción realizada por el modelo.
 
@@ -93,7 +93,7 @@ Primero, se realiza una predicción sobre la imagen procesada utilizando el mode
 
 La función devuelve una imagen con el mapa de calor superpuesto, destacando las áreas más influyentes en la predicción. Este mapa de calor facilita la interpretación de las decisiones del modelo, permitiendo identificar las regiones de la imagen que contribuyen más significativamente a la clasificación final.
 
-### integrator.py
+## integrator.py
 
 Este módulo, como su nombre indica, se encarga de integrar los diferentes scripts necesarios para obtener la información que alimenta y permite el funcionamiento del entorno gráfico. A través de este proceso, se obtiene tanto la clase predicha como la probabilidad asociada al modelo, así como la imagen con el mapa de calor Grad-CAM, el cual resalta las áreas más relevantes de la imagen para la toma de decisiones del modelo
 
@@ -110,6 +110,7 @@ Para ejecutar correctamente la herramienta de detección de neumonía, siga los 
 # Uso de la interfaz gráfica
 
 Al ejecutar el script detector_neumonia.py, se abrirá una ventana con la interfaz gráfica, la cual debe verse de la siguiente manera:
-![
+![interfaz 1](imagen_2025-01-28_221122786.png)
+
 
 
