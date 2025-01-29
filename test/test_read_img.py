@@ -2,7 +2,7 @@ from unittest.mock import MagicMock
 import numpy as np
 
 # Importar la funcion que se va realizar el test unitario
-from read_img import read_image_file
+from src.data.read_img import read_image_file
 
 def test_read_image_file_dcm(mocker):
     # Mock para el resultado de pydicom.dcmread

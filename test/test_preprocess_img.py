@@ -1,7 +1,7 @@
 import numpy as np
 
 # Importar la funcion que se va realizar el test unitario
-from preprocess_img import preprocess_image
+from src.data.preprocess_img import preprocess_image
 
 def test_preprocess_image():
     # Generar un array aleatorio para probar preprocess_image
