@@ -90,7 +90,7 @@ Para regularizar el modelo se utiliza 3 capas de Dropout al 20%; dos en los bloq
 
 Nota: El modelo denominado 'conv_MLP_84' en formato .h5 debe ser colocado en la carpeta models para asegurar el funcionamiento correcto de la herramienta de detección,tal como se muestra en la imagen a continuación.
 
-![info](info_model.jpeg)
+![info](images/info.jpg)
 
 ## grad_cam.py
 
@@ -118,18 +118,18 @@ Para ejecutar correctamente la herramienta de detección de neumonía, siga los 
 
 Al ejecutar el script detector_neumonia.py, se abrirá una ventana con la interfaz gráfica, la cual debe verse de la siguiente manera:
 
-![interfaz 1](load.png)
+![interfaz 1](images/load.png)
 
 Siga los siguientes pasos
 
 1. Escriba la cédula del paciente en la casilla correspondiente.
 2. Haga clic en el botón "Cargar Imagen" y seleccione la radiografía de tórax desde su ordenador. La imagen puede estar en formato .dcm (DICOM) u otros formatos comunes como JPEG, PNG, etc.Una vez cargada la imagen, debería verla en la parte izquierda de la interfaz tal como se ve a continuación
 
-![interfaz 2](carga.PNG)
+![interfaz 2](images/carga.PNG)
 
 3. Haga clic en el botón "Predecir" para ejecutar el modelo y obtener el resultado.Tras la predicción, verá lo siguiente:
 
-![interfaz 3](resultado.PNG)
+![interfaz 3](images/resultado.PNG)
 
 - Imagen de la radiografía en la parte izquierda de la pantalla.
 - Imagen con el mapa de calor en la parte derecha, destacando las áreas más influyentes en la predicción.
