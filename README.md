@@ -13,15 +13,15 @@ Además, se implementa la técnica Grad-CAM, que permite resaltar las regiones r
 El repositorio incluye diversos scripts para cada una de las funciones de la herramienta, así como el módulo de integración. También se detallan los requisitos necesarios para su funcionamiento óptimo, las instrucciones de instalación, las pruebas unitarias realizadas para garantizar su correcto desempeño y la licencia correspondiente.
 
 # Tabla de contenido
-- [Introducción](# Introducción)
-        - [Neumonía](# Neumonía)
+- [Introducción](#Introducción)
+    - [Neumonía](#Neumonía)
 - [Archivos del repositorio](#Archivos-del-repositorio)
-         - [detector_neumonia.py](#detector-neumonia-py)
-         - [read_img.py](#read-img-py) 
-         - [preprocess_img.py](#preprocess-img-py)
-         - [load_model.py](#load-model-py)  
-         - [grad_cam.py](#grad-cam-py)  
-         - [integrator.py](#integrator-py)       
+    - [detector_neumonia.py](#detector-neumonia-py)
+    - [read_img.py](#read-img-py) 
+    - [preprocess_img.py](#preprocess-img-py)
+    - [load_model.py](#load-model-py)  
+    - [grad_cam.py](#grad-cam-py)  
+    - [integrator.py](#integrator-py)       
  - [Requerimientos para usar la herramienta de detección](#Requerimientos-para-usar-la-herramienta-de-detección) 
 ---
 
@@ -110,6 +110,6 @@ Para ejecutar correctamente la herramienta de detección de neumonía, siga los 
 # Uso de la interfaz gráfica
 
 Al ejecutar el script detector_neumonia.py, se abrirá una ventana con la interfaz gráfica, la cual debe verse de la siguiente manera:
-![alt text](image.png)
+![
 
 
