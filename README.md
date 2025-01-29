@@ -52,21 +52,21 @@ A nivel general, la estructura del proyecto es la siguiente:
 
 1. Directorios principales:
 
-   -Images/ Contiene las imágenes utilizadas en el proyecto.
-   -Reports/ Almacena los reportes generados durante el análisis o ejecución del código.
-   -Src (Source)/ Contiene el código fuente del proyecto, organizado en los siguientes subdirectorios:
-       .Data/ Contiene scripts relacionados con el manejo de datos, como app.py – preprocess_img.py – read_img.py
-       .Models/ almacena el modelo entrenado y el script necesario para su gestión y uso.
-       .Visualizations/ Contiene scripts para la generación y almacenamiento de gráficos, como grad_cam.py 
-   -Test/ Almacena las pruebas unitarias del proyecto.
+- Images/ Contiene las imágenes utilizadas en el proyecto.
+- Reports/ Almacena los reportes generados durante el análisis o ejecución del código.
+- Src (Source)/ Contiene el código fuente del proyecto, organizado en los siguientes subdirectorios:
+  . Data/ Contiene scripts relacionados con el manejo de datos, como app.py – preprocess_img.py – read_img.py
+  . Models/ almacena el modelo entrenado y el script necesario para su gestión y uso.
+  . Visualizations/ Contiene scripts para la generación y almacenamiento de gráficos, como grad_cam.py 
+- Test/ Almacena las pruebas unitarias del proyecto.
 
 2. Archivos en la raíz del proyecto:
-   -gitignore: Define los archivos y carpetas que deben ser ignorados en el control de versiones con Git.
-   -Dockerfile: Especifica las instrucciones para construir el contenedor Docker del proyecto.
-   -main.py: Archivo principal que sirve como punto de entrada al programa.
-   -README.md: Documento con información detallada sobre el uso y configuración del proyecto.
-   -requirements.txt: Lista de dependencias de Python necesarias para la ejecución del proyecto.
-   -LICENSE.txt: Contiene la licencia del proyecto, especificando los términos de uso y distribución del código.
+- gitignore: Define los archivos y carpetas que deben ser ignorados en el control de versiones con Git.
+- Dockerfile: Especifica las instrucciones para construir el contenedor Docker del proyecto.
+- main.py: Archivo principal que sirve como punto de entrada al programa.
+- README.md: Documento con información detallada sobre el uso y configuración del proyecto.
+- requirements.txt: Lista de dependencias de Python necesarias para la ejecución del proyecto.
+- LICENSE.txt: Contiene la licencia del proyecto, especificando los términos de uso y distribución del código.
    
 # Archivos del repositorio
 
