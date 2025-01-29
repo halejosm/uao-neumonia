@@ -7,8 +7,8 @@ import tkcap
 import tensorflow as tf
 
 # Importaciones de módulos personalizados
-from read_img import read_image_file
-from integrator import predict_image
+from data.read_img import read_image_file
+from models.integrator import predict_image
 
 # Configuración global de TensorFlow
 tf.compat.v1.disable_eager_execution()
@@ -50,7 +50,7 @@ class Predictor:
 # Clase para manejar el almacenamiento
 class StorageHandler:
     def __init__(self):
-        self.csv_file = "historial.csv"
+        self.csv_file = "reports/historial.csv"
         self.report_id = 0
 
     def save_to_csv(self, patient_id, label, probability):
@@ -75,10 +75,10 @@ class StorageHandler:
             root: La raíz de la interfaz gráfica de usuario.
         """
         cap = tkcap.CAP(root)
-        report_name = f"Reporte{self.report_id}.jpg"
+        report_name = f"reports/Reporte{self.report_id}.jpg"
         img = cap.capture(report_name)
         img = Image.open(report_name).convert("RGB")
-        pdf_path = f"Reporte{self.report_id}.pdf"
+        pdf_path = f"reports/Reporte{self.report_id}.pdf"
         img.save(pdf_path)
         self.report_id += 1
         showinfo(title="PDF", message="El PDF fue generado con éxito.")
