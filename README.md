@@ -90,7 +90,7 @@ Para regularizar el modelo se utiliza 3 capas de Dropout al 20%; dos en los bloq
 
 Nota: El modelo denominado 'conv_MLP_84' en formato .h5 debe ser colocado en la carpeta models para asegurar el funcionamiento correcto de la herramienta de detección,tal como se muestra en la imagen a continuación.
 
-![info](load.png)
+![info](info_model.jpeg)
 
 ## grad_cam.py
 
