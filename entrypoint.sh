@@ -1,17 +1,3 @@
-#!/bin/bash --login
-# The --login ensures the bash configuration is loaded,
-# enabling Conda.
+#!/bin/bash
 
-# Enable strict mode.
-set -euo pipefail
-# ... Run whatever commands ...
-
-# Temporarily disable strict mode and activate conda:
-set +euo pipefail
-conda activate myenv
-
-# Re-enable strict mode:
-set -euo pipefail
-
-# exec the final command:
-exec python main.py
+conda run -n myenv python src/main.py  # Reemplaza tu_script.py con el nombre de tu script principal
