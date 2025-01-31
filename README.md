@@ -131,10 +131,15 @@ Este módulo, como su nombre indica, se encarga de integrar los diferentes scrip
 Para ejecutar correctamente la herramienta de detección de neumonía, siga los siguientes pasos:
 
 1. Se debe clonar la información del repositorio uao-neumonia  el cual se encuentra en el siguiente enlace  https://github.com/halejosm/uao-neumonia.git 
-2. Instale anaconda en su sistema operativo, las instrucciones se encuentran en el siguiente link: https://docs.anaconda.com/anaconda/install/
-3. Abra Anaconda Prompt y ejecute el  comando conda create -n tf tensorflow para crear un entorno virtual llamado tf con TensorFlow. Nota: La versión de Python instalada en el entorno será 3.10.13
-4. Active el entorno creado con el comando conda actívate tf
-5. Navegue hasta la carpeta del repositorio clonado,asegúrese de ubicar el archivo requirements.txt, que contiene las versiones de las librerías necesarias e instale las dependencias con pip install –r requirements.txt
+2. Asegúrate de tener Python instalado en tu ordenador. Se recomienda usar la versión Python 3.10.
+3. crear y configurar un entorno virtual: Puede conjurar su entorno virtual desde la consola del sistema o puede usar VS Code. Nota: Un entorno virtual es un espacio aislado dentro de tu sistema donde puedes instalar bibliotecas y dependencias necesarias para un proyecto, sin afectar el resto del sistema ni otras aplicaciones.
+- Si desea usar VS Code estas son las instrucciones a seguir:
+- Inicia Visual Studio Code desde el directorio donde has clonado el repositorio del proyecto.
+- Puedes abrir la barra de comandos presionando trl + Shift + P.
+- Escribe y busca la opción "Python: Crear un entorno virtual" para crear el entorno virtual.
+- Selecciona la opción "Crear entorno virtual (.venv)
+- Asegúrate de elegir la versión Python 3.10
+- No olvides seleccionar el archivo requirements.txt. Este archivo contiene todas las bibliotecas y dependencias necesarias para el funcionamiento correcto del proyecto.
 
 # Uso de la interfaz gráfica
 
