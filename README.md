@@ -135,7 +135,7 @@ Para ejecutar correctamente la herramienta de detección de neumonía, siga los 
 3. crear y configurar un entorno virtual: Puede craer su entorno virtual desde la consola del sistema o puede usar VS Code. Nota: Un entorno virtual es un espacio aislado dentro de tu sistema donde puedes instalar bibliotecas y dependencias necesarias para un proyecto, sin afectar el resto del sistema ni otras aplicaciones.
 - Si desea usar VS Code estas son las instrucciones a seguir:
 - Inicia Visual Studio Code desde el directorio donde has clonado el repositorio del proyecto.
-- Puedes abrir la barra de comandos presionando trl + Shift + P.
+- Puedes abrir la barra de comandos presionando ctrl + Shift + P.
 - Escribe y busca la opción "Python: Crear un entorno virtual" para crear el entorno virtual.
 - Selecciona la opción "Crear entorno virtual (.venv)
 - Asegúrate de elegir la versión Python 3.10
