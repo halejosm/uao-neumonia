@@ -6,7 +6,8 @@ img2pdf==0.5.1
 opencv_python==4.11.0.86
 matplotlib==3.10.0
 pandas==2.2.3
-tensorflow==2.10.0
+numpy ==1.26.4
+tensorflow==2.14.0
 python-xlib==0.33
 pytest==8.3.4
 pytest-mock==3.14.0
