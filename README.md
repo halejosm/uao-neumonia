@@ -132,7 +132,7 @@ Para ejecutar correctamente la herramienta de detección de neumonía, siga los 
 
 1. Se debe clonar la información del repositorio uao-neumonia  el cual se encuentra en el siguiente enlace  https://github.com/halejosm/uao-neumonia.git 
 2. Asegúrate de tener Python instalado en tu ordenador. Se recomienda usar la versión Python 3.10.
-3. crear y configurar un entorno virtual: Puede conjurar su entorno virtual desde la consola del sistema o puede usar VS Code. Nota: Un entorno virtual es un espacio aislado dentro de tu sistema donde puedes instalar bibliotecas y dependencias necesarias para un proyecto, sin afectar el resto del sistema ni otras aplicaciones.
+3. crear y configurar un entorno virtual: Puede craer su entorno virtual desde la consola del sistema o puede usar VS Code. Nota: Un entorno virtual es un espacio aislado dentro de tu sistema donde puedes instalar bibliotecas y dependencias necesarias para un proyecto, sin afectar el resto del sistema ni otras aplicaciones.
 - Si desea usar VS Code estas son las instrucciones a seguir:
 - Inicia Visual Studio Code desde el directorio donde has clonado el repositorio del proyecto.
 - Puedes abrir la barra de comandos presionando trl + Shift + P.
