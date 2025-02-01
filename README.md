@@ -209,11 +209,11 @@ Docker no tiene una interfaz por defecto por lo cual hay que configurar un servi
 El link de descarga esta en el siguiente link https://sourceforge.net/projects/vcxsrv/
 Después de instalar la aplicación se debe ajustar los siguientes parámetros:
 
+![imagen_1](Images/configuración.PNG)
+
 4. Iniciar la imagen y crear el contenedor Docker
 
 Para ejecutar la imagen y crear el contenedor Docker se usa el siguiente comando
-
-![imagen_1](Images/configuración.PNG)
 
 docker run -it --rm "nombre de la iamgen"
 
