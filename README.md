@@ -221,6 +221,11 @@ Las imagenes para probar esta en home/src/data/raw como se ve en la siguiente im
 
 ![imagen_2](Images/load.PNG)
 
+Bibliografía
+https://docs.docker.com/get-started/docker-overview/
+https://www.docker.com
+https://docs.oracle.com/cd/E37929_01/html/E36693/gmcdr.html
+
 # Integrantes del proyecto
 
 - Francisco Javier Rivera Rozo
