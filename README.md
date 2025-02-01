@@ -172,10 +172,16 @@ Siga los siguientes pasos
 - Francisco Javier Rivera Rozo
 - Carlos Armando Daza Rendón
 - Andrés Felipe Coral
-- alejandro sanchez
-
+- Alejandro Sànchez Murillo
 
    
+
+# Como crear el contendor 
+- Se debe descargar VcxSrv
+- En la seccion tres Extra setting  chequear Disable access control
+- docker run -it --rm app-neumonia
+- Las imagenes para probar esta en home/src/data/raw
+
 
 
 
