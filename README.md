@@ -24,6 +24,7 @@ El repositorio incluye diversos scripts para cada una de las funciones de la her
     - [grad_cam.py](#grad-cam-py)  
     - [integrator.py](#integrator-py)       
  - [Requerimientos para usar la herramienta de detección](#requerimientos-para-usar-la-herramienta-de-detección)
+ - [Dockerización](#Dockerización)
  - [Integrantes del proyecto](#Integrantes-del-proyecto)
 
 ---
@@ -167,6 +168,55 @@ Siga los siguientes pasos
 5. Puede guardar una copia del reporte visual generado por el entorno haciendo clic en el botón "PDF". Esto creará un archivo en formato PDF y JPG con la captura de la interfaz y los resultados de la predicción.
 6. Si necesita realizar una corrección o una nueva predicción, puede borrar todos los datos ingresados haciendo clic en el botón "Borrar".
 
+#Dockerización
+
+La Dockerización es el proceso de empaquetar una aplicación junto con todas sus dependencias, configuraciones y bibliotecas necesarias en un contenedor Docker. Esto permite que la aplicación se ejecute de manera consistente y reproducible en cualquier entorno, sin importar el sistema operativo o la configuración de la máquina en la que se ejecute.
+
+1. Creación del Docker File
+   
+Docker File es un archivo de texto que contiene una serie de instrucciones para construir una imagen de Docker, este se un archivo de texto que contiene una serie de instrucciones para construir una imagen de Docker, este archivo debe estar dentro de la raíz del proyecto y se configura de la siguiente manera:
+
+-Se usa una imagen base (se especifica la versión de Python)
+FROM python:3.10
+- Se instalan dependencias necesarias: OpenCV y Xvfb
+RUN apt-get update -y && \
+    apt-get install -y \
+    python3-tk \
+    x11-utils
+-Se establece el directorio de trabajo dentro del contenedor
+ WORKDIR /home/src
+- Se copian los archivos del proyecto contenedor
+COPY . /home/src/
+- Se instalan los requirements o dependencias necesarias
+RUN pip install -r requirements.txt
+- Se establece el comando para ejecutar la aplicación
+CMD ["python", "main.py"]
+
+2. Crear la imagen
+
+La imagen es un archivo liviano, autónomo y ejecutable que incluye todo lo necesario para ejecutar una aplicación o servicio. Este archivo contiene el código de la aplicación, las bibliotecas necesarias, dependencias, herramientas, configuraciones y el sistema operativo base.
+
+Para crear la imagen, sigue estos pasos
+
+- Abre la terminal de tu sistema operativo o en VS CODE
+- Navega al directorio del proyecto donde se encuentra el Dockerfile. Puedes usar el comando cd para cambiar de directorio.
+- crea la imagen usando el siguiente comando Docker build –t nombre de la imagen.
+
+3. Agregar Interfaz grafica
+
+Docker no tiene una interfaz por defecto por lo cual hay que configurar un servidor con interfaz gráfica (X), inicialmente se debe descargar VcXsrv que es una aplicación que permita mostrar las aplicaciones graficas en la pantalla de Windows.
+El link de descarga esta en el siguiente link https://sourceforge.net/projects/vcxsrv/
+Después de instalar la aplicación se debe ajustar los siguientes parámetros:
+
+4. Iniciar la imagen y crear el contenedor Docker
+
+Para ejecutar la imagen y crear el contenedor Docker se usa el siguiente comando
+
+docker run -it --rm "nombre de la iamgen"
+
+Las imagenes para probar esta en home/src/data/raw como se ve en la siguiente imagen
+
+
 # Integrantes del proyecto
 
 - Francisco Javier Rivera Rozo
@@ -176,11 +226,7 @@ Siga los siguientes pasos
 
    
 
-# Como crear el contendor 
-- Se debe descargar VcxSrv
-- En la seccion tres Extra setting  chequear Disable access control
-- docker run -it --rm app-neumonia
-- Las imagenes para probar esta en home/src/data/raw
+
 
 
 
