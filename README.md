@@ -168,7 +168,7 @@ Siga los siguientes pasos
 5. Puede guardar una copia del reporte visual generado por el entorno haciendo clic en el botón "PDF". Esto creará un archivo en formato PDF y JPG con la captura de la interfaz y los resultados de la predicción.
 6. Si necesita realizar una corrección o una nueva predicción, puede borrar todos los datos ingresados haciendo clic en el botón "Borrar".
 
-#Dockerización
+# Dockerización
 
 La Dockerización es el proceso de empaquetar una aplicación junto con todas sus dependencias, configuraciones y bibliotecas necesarias en un contenedor Docker. Esto permite que la aplicación se ejecute de manera consistente y reproducible en cualquier entorno, sin importar el sistema operativo o la configuración de la máquina en la que se ejecute.
 
@@ -176,21 +176,22 @@ La Dockerización es el proceso de empaquetar una aplicación junto con todas su
    
 Docker File es un archivo de texto que contiene una serie de instrucciones para construir una imagen de Docker, este se un archivo de texto que contiene una serie de instrucciones para construir una imagen de Docker, este archivo debe estar dentro de la raíz del proyecto y se configura de la siguiente manera:
 
--Se usa una imagen base (se especifica la versión de Python)
-FROM python:3.10
-- Se instalan dependencias necesarias: OpenCV y Xvfb
+- Se usa una imagen base (se especifica la versión de Python) - (FROM python:3.11.2)
+- Se instalan dependencias necesarias: (OpenCV y Xvfb
 RUN apt-get update -y && \
     apt-get install -y \
     python3-tk \
-    x11-utils
--Se establece el directorio de trabajo dentro del contenedor
- WORKDIR /home/src
+    x11-utils)
+- Se establece el directorio de trabajo dentro del contenedor
+ (WORKDIR /home/src)
 - Se copian los archivos del proyecto contenedor
-COPY . /home/src/
+( COPY . /home/src/) 
 - Se instalan los requirements o dependencias necesarias
-RUN pip install -r requirements.txt
+( RUN pip install -r requirements.txt)
+- Configura el DISPLAY para apuntar al host de Windows
+(ENV DISPLAY=host.docker.internal:0.0)
 - Se establece el comando para ejecutar la aplicación
-CMD ["python", "main.py"]
+( CMD ["python", "main.py"] )
 
 2. Crear la imagen
 
@@ -212,10 +213,13 @@ Después de instalar la aplicación se debe ajustar los siguientes parámetros:
 
 Para ejecutar la imagen y crear el contenedor Docker se usa el siguiente comando
 
+![imagen_1](Images/configuración.PNG)
+
 docker run -it --rm "nombre de la iamgen"
 
 Las imagenes para probar esta en home/src/data/raw como se ve en la siguiente imagen
 
+![imagen_2](Images/load.PNG)
 
 # Integrantes del proyecto
 
